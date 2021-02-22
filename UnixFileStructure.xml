@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!-- DTD FOR FILE STRUCTURE -->
+
+<File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="fileSystemSchema.xsd">
+    <iNode>
+        132453645
+    </iNode>
+    <permissions >
+        <owner read="true" write="true" execute="true" />
+        <group read="true" write="false" execute="true" />
+        <other read="true" write="false" execute="false"/>
+    </permissions>
+    <mode>
+        Directory
+    </mode>
+    <links>
+       2
+    </links>
+    <ownership>
+        <owner name="evad"/>
+        <group>
+            cc3591
+        </group>
+    </ownership>
+    <bytes size="8196" type="bytes"/>
+    <date>
+        <day value="29"/>
+        <month value="Oct"/>
+        <year value="2001"/>
+    </date>
+    <hardLink>
+        play
+    </hardLink>
+</File>

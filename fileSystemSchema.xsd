@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="File">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element name="iNode" type="xsd:string"/>
+                <xsd:element name="permissions">
+                    <xsd:complexType>
+                        <xsd:all>
+                            <xsd:element name="owner">
+                                <xsd:complexType>
+                                    <xsd:attribute name="read" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="write" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="execute" type="xsd:boolean" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="group">
+                                <xsd:complexType>
+                                    <xsd:attribute name="read" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="write" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="execute" type="xsd:boolean" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="other">
+                                <xsd:complexType>
+                                    <xsd:attribute name="read" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="write" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="execute" type="xsd:boolean" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:all>
+                    </xsd:complexType>
+
+                    
+                </xsd:element>
+                <xsd:element name="mode" type="xsd:string"/>
+                <xsd:element name="links" type="xsd:integer"/>
+                <xsd:element name="ownership">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="owner"/>
+                        <xsd:element name="group"/>
+                    </xsd:all>
+                </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="bytes">
+                    <xsd:complexType>
+                        <xsd:attribute name="size"/>
+                        <xsd:attribute name="type"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="date">
+                    <xsd:complexType>
+                        <xsd:all>
+                            <xsd:element name="day">
+                                <xsd:complexType>
+                                    <xsd:attribute name="value" type="xsd:integer"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="month">
+                                <xsd:complexType>
+                                    <xsd:attribute name="value" type="xsd:string"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="year">
+                                <xsd:complexType>
+                                    <xsd:attribute name="value" type="xsd:integer"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:all>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="hardLink" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element> 
+</xsd:schema>

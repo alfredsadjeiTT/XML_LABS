@@ -1,0 +1,26 @@
+
+        <!ELEMENT File (iNode,permissions,mode,links,ownership,bytes,date,
+                symLink?, hardLink)>
+        <!ELEMENT iNode (#PCDATA)>
+        <!ELEMENT mode (#PCDATA)>
+        <!ELEMENT links (#PCDATA)>
+        <!ELEMENT ownership (owner,group)>
+        <!ELEMENT permissions EMPTY>
+        <!ELEMENT group (#PCDATA)>
+        <!ELEMENT bytes EMPTY>
+        <!ELEMENT owner EMPTY>
+        <!ELEMENT year EMPTY >
+        <!ELEMENT day  EMPTY>
+        <!ELEMENT month EMPTY>
+        <!ELEMENT date (day?, month?, year?)>
+        <!ELEMENT symLink (hardLink)>
+        <!ELEMENT hardLink (#PCDATA)>
+        <!ATTLIST owner name CDATA #REQUIRED>
+        <!ATTLIST bytes size CDATA #REQUIRED>
+        <!ATTLIST bytes type CDATA #REQUIRED>
+        <!ATTLIST day value CDATA #REQUIRED>
+        <!ATTLIST month value CDATA #REQUIRED>
+        <!ATTLIST year value CDATA #REQUIRED>
+        <!ATTLIST permissions read CDATA #REQUIRED>
+        <!ATTLIST permissions write CDATA #REQUIRED>
+        <!ATTLIST permissions execute CDATA #REQUIRED>

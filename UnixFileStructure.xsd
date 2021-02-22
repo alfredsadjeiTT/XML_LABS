@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="File">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="iNode" type="xs:string" />
+                <xs:element name="permissions">
+                    <xs:complexType>
+                        <xs:attribute name="read" type="xs:boolean" use="required" />
+                        <xs:attribute name="write" type="xs:boolean" use="required" />
+                        <xs:attribute name="execute" type="xs:boolean" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="mode" type="xs:string" />
+                <xs:element name="links" type="xs:string" />
+                <xs:element name="ownership">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="owner">
+                                <xs:complexType>
+                                    <xs:attribute name="name" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="group" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="bytes">
+                    <xs:complexType>
+                        <xs:attribute name="size" type="xs:integer" use="required" />
+                        <xs:attribute name="type" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="date">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="day">
+                                <xs:complexType>
+                                    <xs:attribute name="value" type="xs:integer" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="month">
+                                <xs:complexType>
+                                    <xs:attribute name="value" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="year">
+                                <xs:complexType>
+                                    <xs:attribute name="value" type="xs:integer" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="hardLink" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
